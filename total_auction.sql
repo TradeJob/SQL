@@ -25,7 +25,7 @@ WHERE
 	DATE_FORMAT(
 		agreementsuccess.CreatedTime,
 		"%Y-%m-%d"
-	) = "2015-01-21"
+	) BETWEEN "2015-01-21" AND "2015-01-21"
 AND agreementsuccess.Manager_id = 285
 UNION
 	SELECT
@@ -50,8 +50,8 @@ UNION
 	INNER JOIN address AS address_person_manager_id ON address_person_manager_id.id = person_manager_id.Place_id
 	INNER JOIN category AS category_address_person_manager_id ON category_address_person_manager_id.id = address_person_manager_id.Province_id
 	WHERE
-		DATE_FORMAT(
-			auctionsuccess.CreatedTime,
-			"%Y-%m-%d"
-		) = "2015-01-21"
+	DATE_FORMAT(
+		auctionsuccess.CreatedTime,
+		"%Y-%m-%d"
+	) BETWEEN "2015-01-21" AND "2015-01-21"
 	AND auctionsuccess.Manager_id = 285
